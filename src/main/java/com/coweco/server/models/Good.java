@@ -12,17 +12,20 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Good {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	long id;
 	String title;
 	String brand;
 	float brand_rating;
+	int reviews_num;
 	String date_upload;
 	@Column(columnDefinition = "TEXT")
 	String description;
 	String location;
 	float price;
-	@ManyToOne(optional = false, cascade = CascadeType.ALL)
+	@Column(columnDefinition = "TEXT")
+	String link;
+	@ManyToOne(optional = false, cascade = CascadeType.MERGE) //TODO: разберись как работают каскады! тут была ошибка!
 	@JoinColumn(name = "session_id")
 	SessionAvito sessionAvito;
 
@@ -96,6 +99,22 @@ public class Good {
 
 	public void setSessionAvito(SessionAvito sessionAvito) {
 		this.sessionAvito = sessionAvito;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
+	public int getReviews_num() {
+		return reviews_num;
+	}
+
+	public void setReviews_num(int reviews_num) {
+		this.reviews_num = reviews_num;
 	}
 
 }

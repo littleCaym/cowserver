@@ -8,9 +8,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * todo Document type GoodsServiceImpl
- */
 @Service
 public class MainServiceImpl implements MainService {
 
@@ -38,5 +35,11 @@ public class MainServiceImpl implements MainService {
 	public List<SessionAvito> getAllSessionAvitos() {
 		return sessionsRepository.findAll();
 	}
+
+	@Override
+	public SessionAvito getLastSessionAvito() {
+		return sessionsRepository.findFirstByOrderByIdDesc();
+	}
+
 
 }

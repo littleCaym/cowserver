@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public interface MainService {
 
-	public void saveGood(Good good);
-	public List<Good> getAllGoods();
+	void saveGood(Good good);
+	List<Good> getAllGoods();
 
-	public void saveSessionAvito(SessionAvito sessionAvito);
-	public List<SessionAvito> getAllSessionAvitos();
+	void saveSessionAvito(SessionAvito sessionAvito);
+	List<SessionAvito> getAllSessionAvitos();
+	SessionAvito getLastSessionAvito();
 
 }

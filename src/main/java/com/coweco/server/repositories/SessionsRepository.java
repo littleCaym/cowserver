@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SessionsRepository extends JpaRepository<SessionAvito, Long> {
-
+	SessionAvito findFirstByOrderByIdDesc();
 }

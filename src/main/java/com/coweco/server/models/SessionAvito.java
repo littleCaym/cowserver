@@ -14,7 +14,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class SessionAvito {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	long id;
 	Timestamp timestamp;
 	@JsonIgnore
