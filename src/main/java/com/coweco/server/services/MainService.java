@@ -10,9 +10,10 @@ public interface MainService {
 
 	void saveGood(Good good);
 	List<Good> getAllGoods();
+	List<Good> getGoodsForLastSession();
 
 	void saveSessionAvito(SessionAvito sessionAvito);
-	List<SessionAvito> getAllSessionAvitos();
+//	List<SessionAvito> getAllSessionAvitos();
 	SessionAvito getLastSessionAvito();
 
 }

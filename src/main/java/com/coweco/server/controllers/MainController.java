@@ -13,9 +13,8 @@ public class MainController {
 
 	@Autowired
 	MainService mainService;
-	//TODO: Выдавать только последние записи
 	@GetMapping(value = "/avito")
 	public List<Good> getAllGoodsFromAvito(){
-		return mainService.getAllGoods();
+		return mainService.getGoodsForLastSession();
 	}
 }
