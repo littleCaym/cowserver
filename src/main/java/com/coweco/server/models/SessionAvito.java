@@ -1,4 +1,4 @@
-package com.coweco.server.model;
+package com.coweco.server.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.sql.Timestamp;

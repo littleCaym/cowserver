@@ -1,6 +1,5 @@
-package com.coweco.server.model;
+package com.coweco.server.models;
 
-import java.lang.reflect.Type;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
